@@ -14,13 +14,27 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Install Quarto from the provided GitHub release link
+      # Install Quarto CLI from the provided GitHub release link
       - name: Install Quarto CLI
         run: |
           sudo apt-get update
           sudo apt-get install -y wget
-          wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-amd64.deb
-          sudo dpkg -i quarto-1.5.57-linux-amd64.deb
+          wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-arm64.deb
+          sudo dpkg -i quarto-1.5.57-linux-arm64.deb
+
+      # Check if a Quarto project exists, and if not, create it
+      - name: Check for Quarto Project
+        run: |
+          if [ ! -f "_quarto.yml" ]; then
+            echo "Quarto project not found. Creating a new Quarto project."
+            quarto create-project .
+            quarto create presentation.qmd
+            git add .
+            git commit -m "Initialize Quarto project"
+            git push origin main
+          else
+            echo "Quarto project already exists."
+          fi
 
       # Render the Quarto Project
       - name: Render Quarto Project
