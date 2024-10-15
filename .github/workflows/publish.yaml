@@ -9,15 +9,33 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
+      # Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v2
-      
-      - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-      
+
+      # Install Quarto CLI if it is not available
+      - name: Install Quarto CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.2.0/quarto-linux-amd64.deb
+          sudo dpkg -i quarto-linux-amd64.deb
+
+      # Render the Quarto Project
       - name: Render Quarto Project
         run: quarto render
 
+      # Initialize gh-pages branch if it does not exist
+      - name: Initialize gh-pages Branch
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git checkout --orphan gh-pages || true
+          git reset --hard
+          git commit --allow-empty -m "Initialize gh-pages branch"
+          git push origin gh-pages
+
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
