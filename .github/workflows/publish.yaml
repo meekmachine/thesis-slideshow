@@ -28,9 +28,10 @@ jobs:
           if [ ! -f "_quarto.yml" ]; then
             echo "Quarto project not found. Creating a new Quarto project."
             quarto create-project .
-            quarto create presentation.qmd
+            quarto use template quarto-presentation
+            quarto create thesis-slideshow.qmd --type revealjs
             git add .
-            git commit -m "Initialize Quarto project"
+            git commit -m "Initialize Quarto project with presentation"
             git push origin main
           else
             echo "Quarto project already exists."
@@ -38,7 +39,7 @@ jobs:
 
       # Render the Quarto Project
       - name: Render Quarto Project
-        run: quarto render
+        run: quarto render thesis-slideshow.qmd
 
       # Initialize gh-pages branch if it does not exist
       - name: Initialize gh-pages Branch
