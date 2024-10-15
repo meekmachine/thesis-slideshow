@@ -1,0 +1,259 @@
+## Slide 1: Title Slide
+---
+# Speech Simulation
+### A streamlined procedural approach to achieve realistic real-time lip-sync behavior in embodied virtual agents.
+
+![Intro Image](intro_image.png)
+
+:::{.notes}
+- Introduce the topic of speech simulation.
+- Discuss how virtual agents simulate realistic lip-sync behavior.
+- Mention the inspiration for this project and your goal of improving synchronization.
+:::
+
+---
+
+## Slide 2: Introduction
+---
+# Introduction
+- **Overview:**
+  - Background
+  - Related Research
+  - Proposed Approach
+  - Proposed Evaluation
+
+:::{.notes}
+- Summarize the four main sections of the presentation: background, research, approach, and evaluation.
+- Explain that this presentation focuses on improving lip-sync in virtual agents.
+:::
+
+---
+
+## Slide 3: Background: Socially Intelligent Agents (SIAs)
+---
+# Socially Intelligent Agents (SIAs)
+- **What are Socially Intelligent Agents (SIAs)?**
+  - Autonomous systems designed to simulate human-like social interactions [Lugrin et al., 2022].
+  - 3D virtual agents capable of verbal and non-verbal communication.
+  - Successors of Embodied Conversational Agents (ECAs) [Cassell, 2000].
+
+![SIA Diagram](sia_diagram.png)
+
+:::{.notes}
+- Define Socially Intelligent Agents and their role in HCI (Human-Computer Interaction).
+- Highlight the progression from Embodied Conversational Agents (ECAs) to SIAs.
+:::
+
+---
+
+## Slide 4: Computers as Social Actors (CASA)
+---
+# CASA Theory
+- **Computers as Social Actors (CASA) Theory**
+  - People unconsciously treat computers as social entities [Nass & Reeves, 1996].
+  - Social behavior is applied to machines just as it is to humans.
+  - SIAs leverage CASA to enhance user engagement through intuitive interfaces.
+
+![CASA Theory](casa_diagram.png)
+
+:::{.notes}
+- Introduce the CASA theory and its relevance to SIAs.
+- Explain how the theory helps make SIAs more effective by tapping into natural human interaction instincts.
+:::
+
+---
+
+## Slide 5: Facial Action Coding System (FACS)
+---
+# Facial Action Coding System (FACS)
+- Developed by Paul Ekman and Wallace Friesen [1978].
+- Breaks down facial expressions into independent Action Units (AUs).
+- AUs represent the smallest set of muscles that move independently.
+- FACS includes 58 AUs, with 44 used for generating most facial expressions.
+- Intensity of activation rated from "A" to "E".
+
+![FACS Diagram](facs_diagram.png)
+
+:::{.notes}
+- Describe the role of FACS in analyzing and animating facial expressions.
+- Mention how AUs (Action Units) are used in SIAs to mimic realistic human emotions.
+:::
+
+---
+
+## Slide 6: empathic Embodied Virtual Agent (eEVA) Framework
+---
+# empathic Embodied Virtual Agent (eEVA) Framework
+- Developed by Dr. Cristine Lisetti’s team at VISAGE Lab [Lisetti et al., 2013].
+- Empathetic interactions via verbal and non-verbal communication.
+- Real-time interaction via the web without requiring software installation.
+- Built using Angular 1 and JavaScript.
+
+![eEVA Framework](eeva_framework.png)
+
+:::{.notes}
+- Explain the development of the eEVA framework and its focus on empathetic interaction.
+- Mention the technical stack and how it enables real-time interaction through the web.
+:::
+
+---
+
+## Slide 7: Uncanny Valley Challenges
+---
+# Uncanny Valley Challenges
+- The Uncanny Valley refers to discomfort caused by near-human virtual agents [Mori et al., 2012].
+- Small imperfections in facial expressions create unease.
+- Overcoming this is crucial for user comfort in realistic animations.
+
+![Uncanny Valley](uncanny_valley.png)
+
+:::{.notes}
+- Define the Uncanny Valley and its challenges in SIAs.
+- Discuss how addressing imperfections in lip-sync and facial movements helps avoid this discomfort.
+:::
+
+---
+
+## Slide 8: Related Research: Phonemes and Visemes
+---
+# Related Research: Phonemes & Visemes
+- **Phonemes:** Smallest sound units in speech.
+- **Visemes:** Visual counterpart to a phoneme [Fisher, 1968].
+- Used in SIAs for accurate lip-sync.
+- Phoneme-to-viseme mapping remains a key challenge in real-time speech simulation.
+
+![Phoneme-Viseme Mapping](phoneme_viseme.png)
+
+:::{.notes}
+- Define phonemes and visemes, and their significance in speech simulation.
+- Explain the challenges in phoneme-to-viseme mapping for real-time applications.
+:::
+
+---
+
+## Slide 9: Viseme to Phoneme Mapping Techniques
+---
+# Viseme to Phoneme Mapping Techniques
+- Practical applications in digital animation production.
+- Techniques include forced alignment and neural network-based mapping [Microsoft, 2024].
+- Microsoft TTS Viseme Codes serve as benchmarks in commercial systems.
+- Recent improvements include using 20 distinct visemes [Xu et al., 2013].
+
+:::{.notes}
+- Highlight the main techniques used for viseme-to-phoneme mapping.
+- Discuss the significance of Microsoft’s TTS viseme codes as an industry benchmark.
+:::
+
+---
+
+## Slide 10: Data-Driven Approaches
+---
+# Data-Driven Approaches in Lip-Syncing
+- **JALI Model:** Integrates jaw and lip movements [Edwards et al., 2016].
+- **VisemeNet:** Uses LSTM models for viseme prediction [Zhou et al., 2018].
+- **FaceFormer:** Transformer model for 3D facial animations [Fan et al., 2022].
+
+![Data-Driven Approaches](data_driven_approaches.png)
+
+:::{.notes}
+- Describe data-driven approaches for lip-syncing.
+- Explain how neural networks (LSTM, Transformers) are used to predict visemes in real-time applications.
+:::
+
+---
+
+## Slide 11: LipNet for Automated Lipreading
+---
+# LipNet: Automated Lipreading
+- End-to-end model for sentence-level word prediction [Assael et al., 2016].
+- Achieves 95.2% word accuracy on the GRID dataset.
+- Used as a benchmark for lip-sync evaluation systems.
+
+:::{.notes}
+- Introduce LipNet as an advanced lipreading model.
+- Mention its high accuracy rates and its relevance to speech simulation systems.
+:::
+
+---
+
+## Slide 12: Proposed Approach: ECMAScript 6 Enhancements
+---
+# ECMAScript 6 Enhancements
+- ECMAScript 6 (ES6) simplifies code modularity.
+- Replaces Angular's dependency injection.
+- Removes Bower and introduces Node Package Manager (NPM).
+- ES6 modules streamline the system's development [ECMA, 2024].
+
+:::{.notes}
+- Describe the role of ECMAScript 6 in simplifying the code and enhancing performance.
+- Highlight how it replaces legacy systems like Bower and Angular DI with more efficient modern tools.
+:::
+
+---
+
+## Slide 13: Text-to-Phoneme and Phoneme-to-Viseme Mapping
+---
+# Text-to-Phoneme & Phoneme-to-Viseme Mapping
+- **Double Metaphone Algorithm:** Improves phoneme accuracy [Philips, 2000].
+- Mapping phonemes to visemes helps align speech with visual lip movements.
+- The focus is on improving mapping accuracy by addressing coarticulation issues.
+
+:::{.notes}
+- Explain how the Double Metaphone Algorithm enhances phoneme accuracy.
+- Discuss the importance of accurate viseme mapping in real-time lip-sync applications.
+:::
+
+---
+
+## Slide 14: Audio Signal Extraction for Fine-Tuning
+---
+# Audio Signal Extraction
+- Real-time pitch detection using Pitchy [McLeod & Wyvill, 2005].
+- STFT detects phoneme boundaries for smoother transitions.
+- Fine-tuning viseme durations and intensities enhances speech synchronization.
+
+:::{.notes}
+- Detail the process of using audio signals to refine lip-sync accuracy.
+- Highlight the importance of pitch detection and how it affects the viseme timing and intensity.
+:::
+
+---
+
+## Slide 15: Proposed Evaluation – Quantitative
+---
+# Quantitative Evaluation
+- **LipNet Evaluation:** Measures lip-sync accuracy with Word Error Rate (WER) and Character Error Rate (CER).
+- **Microsoft Viseme Codes:** Evaluating viseme alignment accuracy and recognition rate (VAA & VRR) [Microsoft, 2024].
+
+:::{.notes}
+- Explain the quantitative evaluation methods (WER, CER) for measuring lip-sync accuracy.
+- Discuss the importance of aligning visemes with speech for seamless performance.
+:::
+
+---
+
+## Slide 16: Proposed Evaluation – Subjective
+---
+# Subjective Evaluation
+- **Lip-Reader Tests:** Participants provide feedback on lip-sync accuracy.
+- Metrics include Word Accuracy (WA) and Sentence Accuracy (SA) [Altieri et al., 2011].
+- Focus on improving lip-sync accuracy compared to Microsoft's TTS API.
+
+:::{.notes}
+- Describe the subjective evaluation with lip-readers.
+- Explain how user feedback on Word Accuracy (WA) and Sentence Accuracy (SA) informs the performance of the system.
+:::
+
+---
+
+## Slide 17: Ethical Considerations
+---
+# Ethical Considerations
+- Ensuring participant privacy.
+- Avoiding bias in facial animation models.
+- Transparent communication of system limitations to users.
+
+:::{.notes}
+- Address the ethical issues related to participant privacy and bias in the development of virtual agents.
+- Ensure transparency when discussing the limitations of the technology with users.
+:::
