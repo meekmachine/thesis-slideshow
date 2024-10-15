@@ -14,11 +14,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Install Quarto from the .deb file stored in the repo
-      - name: Install Quarto from local file
+      # Install Quarto from the provided GitHub release link
+      - name: Install Quarto CLI
         run: |
           sudo apt-get update
-          sudo apt-get install -y ./quarto-1.5.57-linux-arm64.deb
+          sudo apt-get install -y wget
+          wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-arm64.deb
+          sudo dpkg -i quarto-1.5.57-linux-arm64.deb
 
       # Render the Quarto Project
       - name: Render Quarto Project
