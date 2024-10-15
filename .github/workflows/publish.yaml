@@ -14,13 +14,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Install Quarto CLI from the provided GitHub release link
+      # Install Quarto CLI from the GitHub release link (amd64 version)
       - name: Install Quarto CLI
         run: |
           sudo apt-get update
           sudo apt-get install -y wget
-          wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-arm64.deb
-          sudo dpkg -i quarto-1.5.57-linux-arm64.deb
+          wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-amd64.deb
+          sudo dpkg -i quarto-1.5.57-linux-amd64.deb
 
       # Check if a Quarto project exists, and if not, create it
       - name: Check for Quarto Project
